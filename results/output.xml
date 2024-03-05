@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on darwin)" generated="2024-03-05T19:28:23.950108" rpa="false" schemaversion="5">
+<suite id="s1" name="1 RegisterTest &amp; 2 LoginTest">
+<suite id="s1-s1" name="1 RegisterTest" source="/Users/andi/Documents/Repositories/technical-test/tests/1_RegisterTest.robot">
+<test id="s1-s1-t1" name="Verify Error Message on Name Empty Value" line="12">
+<kw name="Open Test Application" owner="BasePageSteps" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Android Application" owner="BasePageSteps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-03-05T19:28:24.219898" elapsed="5.305310"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-03-05T19:28:29.525604" elapsed="0.000442"/>
+</kw>
+<doc>Open the Android application</doc>
+<status status="PASS" start="2024-03-05T19:28:24.219647" elapsed="5.306545"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Open Android Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:24.219273" elapsed="5.306999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Open IOS Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:29.526500" elapsed="0.000323"/>
+</kw>
+<doc>Open the testing application</doc>
+<status status="PASS" start="2024-03-05T19:28:24.218523" elapsed="5.308396"/>
+</kw>
+<kw name="Navigate To Register Screen" owner="LoginPageSteps">
+<kw name="Click Element [Arguments] ${createAccountButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:30.147204" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:29.529227" elapsed="0.618053"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:29.528719" elapsed="0.618626"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:30.149607" level="INFO">Clicking element 'id=textViewLinkRegister'.</msg>
+<msg time="2024-03-05T19:28:30.303939" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:30.147881" elapsed="0.156208"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:30.147546" elapsed="0.156653"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:29.527883" elapsed="0.776520"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:29.527326" elapsed="0.777236"/>
+</kw>
+<kw name="Click On The 'REGISTER' Button" owner="RegisterPageSteps">
+<kw name="Click Element [Arguments] ${registerButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:31.018011" level="INFO">criteria is appCompatButtonRegister
+criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:30.306904" elapsed="0.711200"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:30.306463" elapsed="0.711728"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:31.020612" level="INFO">Clicking element 'id=appCompatButtonRegister'.</msg>
+<msg time="2024-03-05T19:28:31.714957" level="INFO">criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:31.018776" elapsed="0.696360"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:31.018448" elapsed="0.696876"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:30.305854" elapsed="1.409641"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:30.305014" elapsed="1.410586"/>
+</kw>
+<kw name="Element Should Be Visible [Arguments] ${invalidNameMessage} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Element Should Be Visible [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:32.177023" level="INFO">xpath criteria: //android.widget.TextView[@text="Enter Full Name"]</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:31.717216" elapsed="0.459873"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:31.716769" elapsed="0.460380"/>
+</kw>
+<doc>Verify that the element should be visible</doc>
+<status status="PASS" start="2024-03-05T19:28:31.716149" elapsed="0.461061"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-03-05T19:28:32.177488" elapsed="0.231224"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-03-05T19:28:24.217767" elapsed="8.191141"/>
+</test>
+<test id="s1-s1-t2" name="Verify That A New User Can Sign Up To The Application" line="20">
+<kw name="Open Test Application" owner="BasePageSteps" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Android Application" owner="BasePageSteps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-03-05T19:28:32.411502" elapsed="4.045839"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-03-05T19:28:36.457823" elapsed="0.000493"/>
+</kw>
+<doc>Open the Android application</doc>
+<status status="PASS" start="2024-03-05T19:28:32.411094" elapsed="4.047298"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Open Android Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:32.410572" elapsed="4.047869"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Open IOS Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:36.458613" elapsed="0.000414"/>
+</kw>
+<doc>Open the testing application</doc>
+<status status="PASS" start="2024-03-05T19:28:32.410100" elapsed="4.049066"/>
+</kw>
+<kw name="Navigate To Register Screen" owner="LoginPageSteps">
+<kw name="Click Element [Arguments] ${createAccountButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:37.131596" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:36.460816" elapsed="0.670849"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:36.460427" elapsed="0.671301"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:37.134023" level="INFO">Clicking element 'id=textViewLinkRegister'.</msg>
+<msg time="2024-03-05T19:28:37.266087" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:37.132191" elapsed="0.133996"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:37.131903" elapsed="0.134364"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:36.459963" elapsed="0.806408"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:36.459445" elapsed="0.807013"/>
+</kw>
+<kw name="Sign Up To The Application [Arguments] ${NAME} ${EMAIL_ADDRESS} ${PASSWORD} ${PASSWORD}" owner="RegisterPageSteps" source_name="Sign Up To The Application [Arguments] ${name} ${emailAddress} ${password} ${confirmPassword}">
+<kw name="Input Name [Arguments] ${name}" owner="RegisterPageSteps" source_name="Input Name [Arguments] ${name}">
+<kw name="Input Text [Arguments] ${nameTextBox} ${name} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:38.027991" level="INFO">criteria is textInputEditTextName
+criteria is textInputEditTextName</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:37.268638" elapsed="0.759423"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:37.268293" elapsed="0.759831"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:38.030286" level="INFO">Typing text 'anditest' into text field 'id=textInputEditTextName'</msg>
+<msg time="2024-03-05T19:28:38.074064" level="INFO">criteria is textInputEditTextName</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.028587" elapsed="0.045596"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.028301" elapsed="0.046074"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:37.267824" elapsed="0.806669"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:37.267379" elapsed="0.807171"/>
+</kw>
+<kw name="Input Email Address [Arguments] ${emailAddress}" owner="RegisterPageSteps" source_name="Input Email Address [Arguments] ${emailAddress}">
+<kw name="Input Text [Arguments] ${emailAddressTextbox} ${emailAddress} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:38.617126" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.075987" elapsed="0.541218"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.075672" elapsed="0.541628"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:38.619932" level="INFO">Typing text 'anditest@mailinator.com' into text field 'id=textInputEditTextEmail'</msg>
+<msg time="2024-03-05T19:28:38.667170" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.618113" elapsed="0.049142"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.617578" elapsed="0.049780"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:38.075171" elapsed="0.592290"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:38.074806" elapsed="0.592710"/>
+</kw>
+<kw name="Input Password [Arguments] ${password}" owner="RegisterPageSteps" source_name="Input Password [Arguments] ${password}">
+<kw name="Input Text [Arguments] ${passwordTextbox} ${password} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:39.199626" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.668678" elapsed="0.531128"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:38.668419" elapsed="0.531454"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:39.202045" level="INFO">Typing text 'andi@123' into text field 'id=textInputEditTextPassword'</msg>
+<msg time="2024-03-05T19:28:39.245228" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.200332" elapsed="0.044962"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.200049" elapsed="0.045307"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:38.668089" elapsed="0.577334"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:38.667747" elapsed="0.577724"/>
+</kw>
+<kw name="Input Confirm Password [Arguments] ${confirmPassword}" owner="RegisterPageSteps" source_name="Input Confirm Password [Arguments] ${confirmPassword}">
+<kw name="Input Text [Arguments] ${confirmPasswordTextbox} ${confirmPassword} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:39.747867" level="INFO">criteria is textInputEditTextConfirmPassword</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.246531" elapsed="0.501407"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.246292" elapsed="0.501712"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:39.750366" level="INFO">Typing text 'andi@123' into text field 'id=textInputEditTextConfirmPassword'</msg>
+<msg time="2024-03-05T19:28:39.789806" level="INFO">criteria is textInputEditTextConfirmPassword</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.748474" elapsed="0.041460"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.748182" elapsed="0.041842"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:39.245980" elapsed="0.544148"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:39.245649" elapsed="0.544578"/>
+</kw>
+<kw name="Click On The 'REGISTER' Button" owner="RegisterPageSteps">
+<kw name="Click Element [Arguments] ${registerButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:40.314284" level="INFO">criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.791947" elapsed="0.522419"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:39.791536" elapsed="0.522907"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:40.316862" level="INFO">Clicking element 'id=appCompatButtonRegister'.</msg>
+<msg time="2024-03-05T19:28:40.469389" level="INFO">criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:40.314935" elapsed="0.154542"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:40.314633" elapsed="0.154922"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:39.790848" elapsed="0.678795"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:39.790482" elapsed="0.679227"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:37.266864" elapsed="3.202904"/>
+</kw>
+<kw name="Click On The 'Login' Text Link Button" owner="RegisterPageSteps">
+<kw name="Element Should Be Visible [Arguments] ${goToLoginButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Element Should Be Visible [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:41.110312" level="INFO">criteria is appCompatTextViewLoginLink</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:40.471292" elapsed="0.639111"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:40.470996" elapsed="0.639489"/>
+</kw>
+<doc>Verify that the element should be visible</doc>
+<status status="PASS" start="2024-03-05T19:28:40.470560" elapsed="0.640013"/>
+</kw>
+<kw name="Click Element [Arguments] ${goToLoginButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:41.150162" level="INFO">criteria is appCompatTextViewLoginLink</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.111830" elapsed="0.038405"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.111471" elapsed="0.038827"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:41.152577" level="INFO">Clicking element 'id=appCompatTextViewLoginLink'.</msg>
+<msg time="2024-03-05T19:28:41.721188" level="INFO">criteria is appCompatTextViewLoginLink</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.150791" elapsed="0.570520"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.150482" elapsed="0.570953"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:41.110989" elapsed="0.610701"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:40.470136" elapsed="1.251704"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.722524" elapsed="0.267751"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-03-05T19:28:32.409464" elapsed="9.580985"/>
+</test>
+<status status="PASS" start="2024-03-05T19:28:23.979117" elapsed="18.012581"/>
+</suite>
+<suite id="s1-s2" name="2 LoginTest" source="/Users/andi/Documents/Repositories/technical-test/tests/2_LoginTest.robot">
+<test id="s1-s2-t1" name="Verify Error Message on Email Empty Value" line="12">
+<kw name="Open Test Application" owner="BasePageSteps" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Android Application" owner="BasePageSteps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-03-05T19:28:42.000024" elapsed="5.064143"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.064527" elapsed="0.000274"/>
+</kw>
+<doc>Open the Android application</doc>
+<status status="PASS" start="2024-03-05T19:28:41.999806" elapsed="5.065118"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Open Android Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:41.999500" elapsed="5.065491"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Open IOS Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.065164" elapsed="0.000335"/>
+</kw>
+<doc>Open the testing application</doc>
+<status status="PASS" start="2024-03-05T19:28:41.999239" elapsed="5.066373"/>
+</kw>
+<kw name="Click On The 'LOGIN' Button" owner="LoginPageSteps">
+<kw name="Click Element [Arguments] ${loginButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:47.884880" level="INFO">criteria is appCompatButtonLogin</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.067539" elapsed="0.817482"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.067069" elapsed="0.818032"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:47.888506" level="INFO">Clicking element 'id=appCompatButtonLogin'.</msg>
+<msg time="2024-03-05T19:28:48.684137" level="INFO">criteria is appCompatButtonLogin</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.885696" elapsed="0.798521"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:47.885316" elapsed="0.798971"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:47.066629" elapsed="1.617737"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:47.066073" elapsed="1.618349"/>
+</kw>
+<kw name="Element Should Be Visible [Arguments] ${emailErrorMessage} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Element Should Be Visible [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:49.123854" level="INFO">xpath criteria: //android.widget.TextView[@text="Enter Valid Email"]</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:48.685422" elapsed="0.438563"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:48.685133" elapsed="0.438950"/>
+</kw>
+<doc>Verify that the element should be visible</doc>
+<status status="PASS" start="2024-03-05T19:28:48.684704" elapsed="0.439477"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-03-05T19:28:49.124584" elapsed="0.651007"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-03-05T19:28:41.998765" elapsed="7.776996"/>
+</test>
+<test id="s1-s2-t2" name="Verify That A User Can Login To The Application Using Valid Credentials" line="19">
+<kw name="Open Test Application" owner="BasePageSteps" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Android Application" owner="BasePageSteps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-03-05T19:28:49.778139" elapsed="5.687813"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-03-05T19:28:55.466527" elapsed="0.000452"/>
+</kw>
+<doc>Open the Android application</doc>
+<status status="PASS" start="2024-03-05T19:28:49.777738" elapsed="5.689342"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Open Android Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:49.777134" elapsed="5.690040"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Open IOS Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-05T19:28:55.467580" elapsed="0.000398"/>
+</kw>
+<doc>Open the testing application</doc>
+<status status="PASS" start="2024-03-05T19:28:49.776824" elapsed="5.691346"/>
+</kw>
+<kw name="Navigate To Register Screen" owner="LoginPageSteps">
+<kw name="Click Element [Arguments] ${createAccountButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:56.061311" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:55.470366" elapsed="0.591015"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:55.470035" elapsed="0.591408"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:56.063939" level="INFO">Clicking element 'id=textViewLinkRegister'.</msg>
+<msg time="2024-03-05T19:28:56.227488" level="INFO">criteria is textViewLinkRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.061900" elapsed="0.165734"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.061617" elapsed="0.166151"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:55.469568" elapsed="0.758358"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:55.468996" elapsed="0.759045"/>
+</kw>
+<kw name="Sign Up To The Application [Arguments] ${NAME} ${EMAIL_ADDRESS} ${PASSWORD} ${PASSWORD}" owner="RegisterPageSteps" source_name="Sign Up To The Application [Arguments] ${name} ${emailAddress} ${password} ${confirmPassword}">
+<kw name="Input Name [Arguments] ${name}" owner="RegisterPageSteps" source_name="Input Name [Arguments] ${name}">
+<kw name="Input Text [Arguments] ${nameTextBox} ${name} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:56.900220" level="INFO">criteria is textInputEditTextName</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.231880" elapsed="0.668411"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.231086" elapsed="0.669265"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:56.902523" level="INFO">Typing text 'anditest' into text field 'id=textInputEditTextName'</msg>
+<msg time="2024-03-05T19:28:56.954366" level="INFO">criteria is textInputEditTextName</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.900809" elapsed="0.053627"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.900524" elapsed="0.053975"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:56.230255" elapsed="0.724310"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:56.229459" elapsed="0.725152"/>
+</kw>
+<kw name="Input Email Address [Arguments] ${emailAddress}" owner="RegisterPageSteps" source_name="Input Email Address [Arguments] ${emailAddress}">
+<kw name="Input Text [Arguments] ${emailAddressTextbox} ${emailAddress} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:57.508393" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.956387" elapsed="0.552080"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:56.955950" elapsed="0.552590"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:57.511113" level="INFO">Typing text 'anditest@mailinator.com' into text field 'id=textInputEditTextEmail'</msg>
+<msg time="2024-03-05T19:28:57.554917" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:57.509128" elapsed="0.045892"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:57.508809" elapsed="0.046290"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:56.955312" elapsed="0.599892"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:56.954931" elapsed="0.600347"/>
+</kw>
+<kw name="Input Password [Arguments] ${password}" owner="RegisterPageSteps" source_name="Input Password [Arguments] ${password}">
+<kw name="Input Text [Arguments] ${passwordTextbox} ${password} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:58.084238" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:57.556561" elapsed="0.527750"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:57.556273" elapsed="0.528102"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:58.086635" level="INFO">Typing text 'andi@123' into text field 'id=textInputEditTextPassword'</msg>
+<msg time="2024-03-05T19:28:58.124864" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.084855" elapsed="0.040078"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.084559" elapsed="0.040444"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:57.555879" elapsed="0.569195"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:57.555503" elapsed="0.569624"/>
+</kw>
+<kw name="Input Confirm Password [Arguments] ${confirmPassword}" owner="RegisterPageSteps" source_name="Input Confirm Password [Arguments] ${confirmPassword}">
+<kw name="Input Text [Arguments] ${confirmPasswordTextbox} ${confirmPassword} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:58.652687" level="INFO">criteria is textInputEditTextConfirmPassword</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.126325" elapsed="0.526523"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.126076" elapsed="0.526914"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:58.657832" level="INFO">Typing text 'andi@123' into text field 'id=textInputEditTextConfirmPassword'</msg>
+<msg time="2024-03-05T19:28:58.695512" level="INFO">criteria is textInputEditTextConfirmPassword</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.653776" elapsed="0.041802"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.653353" elapsed="0.042287"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:58.125753" elapsed="0.569953"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:58.125315" elapsed="0.570439"/>
+</kw>
+<kw name="Click On The 'REGISTER' Button" owner="RegisterPageSteps">
+<kw name="Click Element [Arguments] ${registerButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:59.204452" level="INFO">criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.696760" elapsed="0.507781"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:58.696514" elapsed="0.508114"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:28:59.207977" level="INFO">Clicking element 'id=appCompatButtonRegister'.</msg>
+<msg time="2024-03-05T19:28:59.279340" level="INFO">criteria is appCompatButtonRegister</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:28:59.205299" elapsed="0.074115"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:59.204906" elapsed="0.074572"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:28:58.696216" elapsed="0.583331"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:58.695928" elapsed="0.583726"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:56.228593" elapsed="3.051116"/>
+</kw>
+<kw name="Go Back" owner="AppiumLibrary">
+<doc>Goes one step backward in the browser history.</doc>
+<status status="PASS" start="2024-03-05T19:28:59.279930" elapsed="0.671127"/>
+</kw>
+<kw name="Login To The Application [Arguments] ${EMAIL_ADDRESS} ${PASSWORD}" owner="LoginPageSteps" source_name="Login To The Application [Arguments] ${emailAddress} ${password}">
+<kw name="Input Email Address [Arguments] ${emailAddress}" owner="LoginPageSteps" source_name="Input Email Address [Arguments] ${emailAddress}">
+<kw name="Input Text [Arguments] ${emailAddressTextbox} ${emailAddress} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:00.512516" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:28:59.953554" elapsed="0.559035"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:28:59.953018" elapsed="0.559634"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:00.515261" level="INFO">Typing text 'anditest@mailinator.com' into text field 'id=textInputEditTextEmail'</msg>
+<msg time="2024-03-05T19:29:00.558982" level="INFO">criteria is textInputEditTextEmail</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:29:00.513193" elapsed="0.045902"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:00.512834" elapsed="0.046395"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:28:59.952373" elapsed="0.606977"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:59.951993" elapsed="0.607440"/>
+</kw>
+<kw name="Input Password [Arguments] ${password}" owner="LoginPageSteps" source_name="Input Password [Arguments] ${password}">
+<kw name="Input Text [Arguments] ${passwordTextbox} ${password} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:01.342209" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:29:00.560697" elapsed="0.781600"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:00.560415" elapsed="0.781965"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:01.345080" level="INFO">Typing text 'andi@123' into text field 'id=textInputEditTextPassword'</msg>
+<msg time="2024-03-05T19:29:01.386948" level="INFO">criteria is textInputEditTextPassword</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.343061" elapsed="0.043959"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.342645" elapsed="0.044437"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2024-03-05T19:29:00.560029" elapsed="0.827121"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:29:00.559650" elapsed="0.828357"/>
+</kw>
+<kw name="Click On The 'LOGIN' Button" owner="LoginPageSteps">
+<kw name="Click Element [Arguments] ${loginButton} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:01.908931" level="INFO">criteria is appCompatButtonLogin</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.390583" elapsed="0.518419"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.390271" elapsed="0.518793"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:01.911355" level="INFO">Clicking element 'id=appCompatButtonLogin'.</msg>
+<msg time="2024-03-05T19:29:01.999435" level="INFO">criteria is appCompatButtonLogin</msg>
+<arg>${locator}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.909553" elapsed="0.089997"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:01.909270" elapsed="0.090355"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2024-03-05T19:29:01.389698" elapsed="0.610001"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:29:01.388325" elapsed="0.611440"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:28:59.951484" elapsed="2.048339"/>
+</kw>
+<kw name="Login Successfully with Correct Name and Password [Arguments] ${EMAIL_ADDRESS} ${PASSWORD}" owner="LoginPageSteps" source_name="Login Successfully with Correct Name and Password [Arguments] ${email} ${password}">
+<kw name="Element Text Should Be [Arguments] ${emailTextValue} ${email} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Element Text Should Be [Arguments] ${locator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:02.678456" level="INFO">criteria is textViewName</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.001686" elapsed="0.676845"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.001324" elapsed="0.677273"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:02.681060" level="INFO">Verifying element 'id=textViewName' contains exactly text 'anditest@mailinator.com'.</msg>
+<msg time="2024-03-05T19:29:02.705240" level="INFO">criteria is textViewName</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.679095" elapsed="0.026211"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.678777" elapsed="0.026593"/>
+</kw>
+<doc>Validate the text of an element</doc>
+<status status="PASS" start="2024-03-05T19:29:02.000867" elapsed="0.704581"/>
+</kw>
+<kw name="Element Text Should Be [Arguments] ${passwordTextValue} ${password} ${SMALL_RETRY_COUNT}" owner="BasePageSteps" source_name="Element Text Should Be [Arguments] ${locator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:02.733778" level="INFO">criteria is textViewPassword</msg>
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.706272" elapsed="0.027576"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.706021" elapsed="0.027892"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-03-05T19:29:02.736164" level="INFO">Verifying element 'id=textViewPassword' contains exactly text 'andi@123'.</msg>
+<msg time="2024-03-05T19:29:02.760097" level="INFO">criteria is textViewPassword</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.734422" elapsed="0.025740"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.734082" elapsed="0.026144"/>
+</kw>
+<doc>Validate the text of an element</doc>
+<status status="PASS" start="2024-03-05T19:29:02.705651" elapsed="0.054643"/>
+</kw>
+<status status="PASS" start="2024-03-05T19:29:02.000291" elapsed="0.760050"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-03-05T19:29:02.760601" elapsed="0.257998"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2024-03-05T19:28:49.776245" elapsed="13.242515"/>
+</test>
+<status status="PASS" start="2024-03-05T19:28:41.992791" elapsed="21.026492"/>
+</suite>
+<status status="PASS" start="2024-03-05T19:28:23.952304" elapsed="39.067545"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="1 RegisterTest &amp; 2 LoginTest">1 RegisterTest &amp; 2 LoginTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="1 RegisterTest">1 RegisterTest &amp; 2 LoginTest.1 RegisterTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="2 LoginTest">1 RegisterTest &amp; 2 LoginTest.2 LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
